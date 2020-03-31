@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculater</title>
+    <link rel="stylesheet" type="text/css" href="calculater.css" />
+    <script src="calculater.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="bottom">
+        <p class="head">Calculator</p>
+        <div>
+            <table class="bottom">
+                <tr>
+                    <th colspan="5"><p id="screen">0</p> </th>
+                </tr>
+                <tr>
+                    <td><button onclick="square()">x<sup>2</sup></button></td>
+                    <td><button onclick="dyadicOperation('y')">x<sup>y</sup></button></td>
+                    <td><button onclick="sin()">sin</button></td>
+                    <td><button onclick="cos()">cos</button></td>
+                    <td><button onclick="tan()">tan</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="sqrt()">√</button></td>
+                    <td><button onclick="power10()">10<sup>x</sup></button></td>
+                    <td><button onclick="log()">log</button></td>
+                    <td><button onclick="exp()">Exp</button></td>
+                    <td><button onclick="dyadicOperation('M')">Mod</button></td>
+                </tr>
+                <tr>
+                    <td><button>↑</button></td>
+                    <td><button class="CE" onclick="clearEntry()">CE</button></td>
+                    <td><button class="C" onclick="clearc()">C</button></td>
+                    <td><button class="DEL" onclick="deletion()">DEL</button></td>
+                    <td><button onclick="dyadicOperation('/')">÷</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="pi()">𝜋</button></td>
+                    <td><button onclick="num(7)">7</button></td>
+                    <td><button onclick="num(8)">8</button></td>
+                    <td><button onclick="num(9)">9</button></td>
+                    <td><button onclick="dyadicOperation('*')">×</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="factorial()">n!</button></td>
+                    <td><button onclick="num(4)">4</button></td>
+                    <td><button onclick="num(5)">5</button></td>
+                    <td><button onclick="num(6)">6</button></td>
+                    <td><button onclick="dyadicOperation('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="changeSign()">±</button></td>
+                    <td><button onclick="num(1)">1</button></td>
+                    <td><button onclick="num(2)">2</button></td>
+                    <td><button onclick="num(3)">3</button></td>
+                    <td><button onclick="dyadicOperation('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="leftBracket()">(</button></td>
+                    <td><button onclick="rightBracket()">)</button></td>
+                    <td><button onclick="num(0)">0</button></td>
+                    <td><button onclick="point()">.</button></td>
+                    <td><button class="equal" onclick="equal()">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
