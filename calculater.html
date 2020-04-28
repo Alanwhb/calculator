@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculater</title>
-    <link rel="stylesheet" type="text/css" href="calculater.css" />
+    <link rel="stylesheet" type="text/css" href="calculator.css" />
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="calculater.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="calculator.js"></script>
 </head>
 <body>
 <div class="container">
@@ -18,53 +19,53 @@
                     <th colspan="5"><p id="screen" class="text-right screen">0</p> </th>
                 </tr>
                 <tr>
-                    <td><button onclick="square()" class="btn btn-default btn-block">x<sup>2</sup></button></td>
-                    <td><button onclick="dyadicOperation('y')" class="btn btn-default btn-block">x<sup>y</sup></button></td>
-                    <td><button onclick="sin()" class="btn btn-default btn-block">sin</button></td>
-                    <td><button onclick="cos()" class="btn btn-default btn-block">cos</button></td>
-                    <td><button onclick="tan()" class="btn btn-default btn-block">tan</button></td>
+                    <td><button value="square" class="btn btn-default btn-block unary">x<sup>2</sup></button></td>
+                    <td><button value="power" class="btn btn-default btn-block binary">x<sup>y</sup></button></td>
+                    <td><button value="sin" class="btn btn-default btn-block unary">sin</button></td>
+                    <td><button value="cos" class="btn btn-default btn-block unary">cos</button></td>
+                    <td><button value="tan" class="btn btn-default btn-block unary">tan</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="sqrt()" class="btn btn-default btn-block">&radic;</button></td>
-                    <td><button onclick="power10()" class="btn btn-default btn-block">10<sup>x</sup></button></td>
-                    <td><button onclick="log()" class="btn btn-default btn-block">log</button></td>
-                    <td><button onclick="exp()" class="btn btn-default btn-block">Exp</button></td>
-                    <td><button onclick="dyadicOperation('M')" class="btn btn-default btn-block">Mod</button></td>
+                    <td><button value="sqrt" class="btn btn-default btn-block unary">&radic;</button></td>
+                    <td><button value="power10" class="btn btn-default btn-block unary">10<sup>x</sup></button></td>
+                    <td><button value="log" class="btn btn-default btn-block unary">log</button></td>
+                    <td><button value="exp" class="btn btn-default btn-block unary">Exp</button></td>
+                    <td><button value="mod" class="btn btn-default btn-block binary">Mod</button></td>
                 </tr>
                 <tr>
                     <td><button class="btn btn-default btn-block">&uarr;</button></td>
-                    <td><button onclick="clearEntry()" class="btn btn-danger btn-block">CE</button></td>
-                    <td><button onclick="clearc()" class="btn btn-danger btn-block">C</button></td>
-                    <td><button onclick="deletion()" class="btn btn-danger btn-block">DEL</button></td>
-                    <td><button onclick="dyadicOperation('/')" class="btn btn-default btn-block">&divide;</button></td>
+                    <td><button value="clearEntry" class="btn btn-danger btn-block control">CE</button></td>
+                    <td><button value="clearC" class="btn btn-danger btn-block control">C</button></td>
+                    <td><button value="deletion" class="btn btn-danger btn-block control">DEL</button></td>
+                    <td><button value="divide" class="btn btn-default btn-block binary">&divide;</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="pi()" class="btn btn-default btn-block">&pi;</button></td>
-                    <td><button onclick="num(7)" class="btn btn-default btn-block">7</button></td>
-                    <td><button onclick="num(8)" class="btn btn-default btn-block">8</button></td>
-                    <td><button onclick="num(9)" class="btn btn-default btn-block">9</button></td>
-                    <td><button onclick="dyadicOperation('*')" class="btn btn-default btn-block">&times;</button></td>
+                    <td><button value="pi" class="btn btn-default btn-block num">&pi;</button></td>
+                    <td><button value="7" class="btn btn-default btn-block num">7</button></td>
+                    <td><button value="8" class="btn btn-default btn-block num">8</button></td>
+                    <td><button value="9" class="btn btn-default btn-block num">9</button></td>
+                    <td><button value="multiply" class="btn btn-default btn-block binary">&times;</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="factorial()" class="btn btn-default btn-block">n!</button></td>
-                    <td><button onclick="num(4)" class="btn btn-default btn-block">4</button></td>
-                    <td><button onclick="num(5)" class="btn btn-default btn-block">5</button></td>
-                    <td><button onclick="num(6)" class="btn btn-default btn-block">6</button></td>
-                    <td><button onclick="dyadicOperation('-')" class="btn btn-default btn-block">-</button></td>
+                    <td><button value="factorial" class="btn btn-default btn-block unary">n!</button></td>
+                    <td><button value="4" class="btn btn-default btn-block num">4</button></td>
+                    <td><button value="5" class="btn btn-default btn-block num">5</button></td>
+                    <td><button value="6" class="btn btn-default btn-block num">6</button></td>
+                    <td><button value="delete" class="btn btn-default btn-block binary">-</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="changeSign()" class="btn btn-default btn-block">&plusmn;</button></td>
-                    <td><button onclick="num(1)" class="btn btn-default btn-block">1</button></td>
-                    <td><button onclick="num(2)" class="btn btn-default btn-block">2</button></td>
-                    <td><button onclick="num(3)" class="btn btn-default btn-block">3</button></td>
-                    <td><button onclick="dyadicOperation('+')" class="btn btn-default btn-block">+</button></td>
+                    <td><button value="changeSign" class="btn btn-default btn-block unary">&plusmn;</button></td>
+                    <td><button value="1" class="btn btn-default btn-block num">1</button></td>
+                    <td><button value="2" class="btn btn-default btn-block num">2</button></td>
+                    <td><button value="3" class="btn btn-default btn-block num">3</button></td>
+                    <td><button value="add" class="btn btn-default btn-block binary">+</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="leftBracket()" class="btn btn-default btn-block">(</button></td>
-                    <td><button onclick="rightBracket()" class="btn btn-default btn-block">)</button></td>
-                    <td><button onclick="num(0)" class="btn btn-default btn-block">0</button></td>
-                    <td><button onclick="point()" class="btn btn-default btn-block">.</button></td>
-                    <td><button onclick="equal()" class="btn btn-success btn-block">=</button></td>
+                    <td><button value="leftBracket" class="btn btn-default btn-block control">(</button></td>
+                    <td><button value="rightBracket" class="btn btn-default btn-block control">)</button></td>
+                    <td><button value="0" class="btn btn-default btn-block num">0</button></td>
+                    <td><button value="point" class="btn btn-default btn-block num">.</button></td>
+                    <td><button value="equal" class="btn btn-success btn-block control">=</button></td>
                 </tr>
             </table>
         </div>
